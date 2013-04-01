@@ -8,4 +8,5 @@ urlpatterns = patterns('',
     url(r'^', include('webapp.urls')),
     url(r'^admin/import/$', 'webapp.views.importcsv'),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^accounts/', include('accounts.urls')),
 )
