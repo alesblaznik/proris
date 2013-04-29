@@ -3,7 +3,9 @@ from webapp.models import Balance, Group, BudgetUserGroup, BudgetUser, Political
 import csv
 
 class DataInput(forms.Form):
-    file = forms.FileField(help_text="*File must be encoded in UTF-8 format")
+    file = forms.FileField(help_text="*File must be encoded in UTF-8 format. \
+        <a href='http://www.mf.gov.si/fileadmin/mf.gov.si/pageuploads/\Prora%C4%8Dun/Sprejeti_prora%C4%8Dun/2013/SP2013_POS.csv'>\
+        Primer datoteke.</a>")
     year = forms.IntegerField()
     
     def save(self):
@@ -91,4 +93,3 @@ class DataInput(forms.Form):
                 item.save()
             else:
                 item = item.get()
-                        
